@@ -22,6 +22,7 @@ const eqArrays = function (array1, array2) {
 const letterPositions = function (sentence) {
   const results = {};
   let arrayOfSentence = sentence.split("");
+  console.log(arrayOfSentence);
   for (let i = 0; i < arrayOfSentence.length; i++) {
     let currentLetter = arrayOfSentence[i];
     if (currentLetter !== " ") {
