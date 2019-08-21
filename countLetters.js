@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -6,11 +6,11 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-const countLetters = function(string){
+const countLetters = function(string) {
   let stringWithoutSpaces = string.split(" ").join("");
   let countOfLetters = {};
-  for(word of stringWithoutSpaces){
-    if(countOfLetters[word]){
+  for (let word of stringWithoutSpaces) {
+    if (countOfLetters[word]) {
       countOfLetters[word] += 1;
     } else {
       countOfLetters[word] = 1;
