@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -6,7 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(array1, array2) {
+const eqArrays = function (array1, array2) {
+  if(!Array.isArray(array1) || !Array.isArray(array2)){
+    console.log("One of the parameters is not an array");
+    return false;
+  }
   if (array1.length !== array2.length) {
     return false;
   } else {
@@ -18,18 +22,18 @@ const eqArrays = function(array1, array2) {
     return true;
   }
 };
-
-const eqObjects = function(object1, object2) {
+//&& keyOfObject1 === keyOfObject2
+const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
   for (let keyOfObject1 in object1) {
     let isTheValue = false;
-    for (let keyOfObject2 in object2) {
-      if ((object2[keyOfObject2] === object1[keyOfObject1]) || eqArrays(object2[keyOfObject2], object1[keyOfObject1])) {
+    //for (let keyOfObject2 in object2) {
+      if (object2[keyOfObject1] === object1[keyOfObject1] || eqArrays(object2[keyOfObject1], object1[keyOfObject1])) {
         isTheValue = true;
       }
-    }
+    //}
     if (!isTheValue) {
       return false;
     }
@@ -38,9 +42,9 @@ const eqObjects = function(object1, object2) {
 };
 
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true); // => true
+const ab = { a: "2", b: "1" };
+const ba = { b: "2", d: "1" };
+assertEqual(eqObjects(ab, ba), false); // => true
 
 const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false); // => false
