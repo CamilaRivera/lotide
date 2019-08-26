@@ -1,4 +1,4 @@
-const assertEqual = require("../assertEqual")
+const assertEqual = require("./assertEqual")
 
 const tail = function(array) {
   let tailArray = array.slice(1);
