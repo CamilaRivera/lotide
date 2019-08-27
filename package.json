@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@CamilaRivera/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "small version of lodash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -11,13 +11,13 @@
     "chai": "^4.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha" 
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CamilaRivera/lotide.git"
   },
-  "author": "",
+  "author": "CamilaRivera",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CamilaRivera/lotide/issues"
