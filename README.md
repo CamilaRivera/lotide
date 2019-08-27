@@ -30,7 +30,10 @@ The following functions are currently implemented:
 * `tail(array)`: return an array with all the elements except the fist element
 * `head(array)`: return the first element of an array
 * `assertArraysEqual(array1, array2)`: if two arrays are equal print a true message else print a false message 
-* `assertEqual(element1, element2)`: check if two elements are the same
+* `assertEqual(element1, element2)`: prints out if two elements are the same
 * `flatten(upToOneNestedArray)`: receive an up to one grade nested array and returns a single array
 * `countOnly(array, object)`: return the first element of an array
-* `eqArray(array)`: check if two arrays are equal and return a boolean
+* `eqArray(array1, array2)`: check if two arrays are equal and return a boolean
+* `assertArraysEqual(array1, array2)`: compares two arrays and prints if they are equal or different
+* `eqObject(object1, object2)`: check if two objects are equal and return a boolean
+* `findKeyByValue(object, valueOfSearchedKey)`: check if the searched value exists in the object and if it does retunr the key
